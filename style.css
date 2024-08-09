@@ -49,23 +49,33 @@
     align-items: center;
 }
 #addBook {
-    padding: 20px;
-    width: 200px;
+    padding: 50px;
     margin: 0;
     position: absolute;
-    top: 14%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-49%, -50%) rotate(0deg);
+    transition-duration: 500ms;
     font-size: 6em;
-    /* background: none;
-    border-style: none; */
+    line-height: 0;
+    background: none;
+    border-style: none;
 }
 #addBook:hover {
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%) rotate(20deg); /*v important, have to combine transformations since youre doing multiple ones to positon it as well*/
+    transform: translate(-46%, -50%) rotate(45deg);
+    transition-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+    /*v important, have to combine transformations since youre doing multiple ones to positon it as well*/
 }
-
+/* @keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+} */
 #modalBG { /*this is the background when the modal pops up, makes BG out of focus */
     height: 100%;
     width: 100%;
