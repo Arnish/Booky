@@ -42,16 +42,27 @@
     height: 85vh;
 }
 
-#modalTest {
+#modalBG { /*this is the background when the modal pops up, makes BG out of focus */
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+
+}
+#modalContent {
     background-color: #edafb8;
     height: 300px;
     width: 30%;
-    position: absolute;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* display: none; */
+    border-radius: 20px;
+    /* display: none; */ 
 }
 /*
 colors:
@@ -59,4 +70,7 @@ colors:
 -beige: #f7e1d7
 -pink: #edafb8
 rest are already in
+
+to do:
+- make modaltest display:none by default but when a button is clicked change display to flex;
 */
