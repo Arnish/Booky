@@ -58,8 +58,12 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 6em;
-    background: none;
-    border-style: none;
+    /* background: none;
+    border-style: none; */
+}
+#addBook:hover {
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(20deg); /*v important, have to combine transformations since youre doing multiple ones to positon it as well*/
 }
 
 #modalBG { /*this is the background when the modal pops up, makes BG out of focus */
