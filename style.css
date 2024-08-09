@@ -57,13 +57,23 @@
 #modalContent {
     background-color: #edafb8;
     height: 300px;
-    width: 30%;
+    width: 300px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 20px;
     /* display: none; */ 
 }
+#modalContent div{
+    margin-bottom: 10px;
+}
+
+#modalContent input {
+    border-radius: 20px;
+    border-style: none;
+    padding: 10px;
+}
+
 /*
 colors:
 -green: #4a5759
