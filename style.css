@@ -39,7 +39,27 @@
 
 #bodyDiv {
     background-color: #b0c4b1;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr;
     height: 85vh;
+}
+#bannerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#addBook {
+    padding: 20px;
+    width: 200px;
+    margin: 0;
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    background: none;
+    border-style: none;
 }
 
 #modalBG { /*this is the background when the modal pops up, makes BG out of focus */
@@ -52,6 +72,7 @@
     align-items: center;
     position: absolute;
     background-color: black;
+    display: none;
 
 }
 #modalContent {
@@ -63,7 +84,7 @@
     align-items: center;
     border-radius: 20px;
     text-align: center;
-    /* display: none; */ 
+    display: none;
 }
 #modalContent div, h1{
     margin-bottom: 10px;
