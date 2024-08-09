@@ -22,11 +22,27 @@
         </div>
     </div>
 
-    <div id="modalTest">
-        <form>
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-        </form>
+    <div id="modalBG">
+        <div id="modalContent">
+            <form>
+                <div>
+                <input type="text" id="bookTitle" name="bookTitle" placeholder="Title" required/>
+                </div>
+
+                <div>
+                <input type="text" id="bookAuthor" name="bookAuthor" placeholder="Author" required/>
+                </div>
+
+                <div>
+                <input type="text" id="bookPages" name="bookPages" placeholder="Pages" required/>
+                </div>
+                <div>
+                <input type="checkbox" id="bookRead" name="bookRead"/>
+                <label for="bookRead">Completed</label>
+                </div>
+                
+            </form>
+        </div>
     </div>
   </body>
 </html>
