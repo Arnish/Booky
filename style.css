@@ -56,15 +56,15 @@
     top: 13.9%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-49%, -50%) rotate(0deg);
+    transform: translate(-49%, -46%) rotate(0deg);
     transition-duration: 500ms;
-    font-size: 6em;
+    font-size: 20vh;
     line-height: 0;
     background: none;
     border-style: none;
 }
 #addBook:hover {
-    transform: translate(-46%, -48%) rotate(45deg);
+    transform: translate(-46%, -43%) rotate(45deg);
     transition-duration: 1000ms;
     animation-iteration-count: 1;
     animation-timing-function: linear; 
