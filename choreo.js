@@ -23,13 +23,42 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
     function booker(a, b, c) {
         const newBook = new Book(a, b, c);
         console.log(newBook);
-        theLib.push(newBook);
+        theLib.push(newBook);   
         console.log(theLib);
     }
-    
+
+    const cardBody = document.getElementById("cardsDiv");
+    for (i=0; i<theLib.length; i++) {
+        //theLib[i] // reads through each book for how many ever books there are
+
+        const bookCardDiv = document.createElement("div");
+        bookCardDiv.classList.add("bookCard");
+        //makes title and appends it to the h1 element > then appends to the card div itself
+        const headerTitle = document.createElement("h1");
+        const textTitle = document.createTextNode(theLib[i].title);
+        headerTitle.appendChild(textTitle);
+        bookCardDiv.appendChild(headerTitle);
+        //makes author and appends it to the p element > then appends to the card div
+        const paraAuthor = document.createElement("p")
+        const textAuthor = document.createTextNode(theLib[i].author);
+        paraAuthor.appendChild(textAuthor);
+        bookCardDiv.appendChild(paraAuthor);
+
+
+        const paraPages = document.createElement("p")
+        const textPages = document.createTextNode(theLib[i].pages);
+        paraPages.appendChild(textPages);
+        bookCardDiv.appendChild(paraPages);
+        //appends the card div to the main body div
+        cardBody.appendChild(bookCardDiv);
+
+        //console.log(textTitle);
+        //console.log(theLib[i].title);
+    }
     //console.log(testForm);
 
-    document.getElementById("modalBG").style.display = "none"; //closes the modal once done
+    //closes the modal once done
+    document.getElementById("modalBG").style.display = "none"; 
     document.getElementById("modalContent").style.display = "none";
 });
 // console.log(formy.elements.name.value);
@@ -46,6 +75,16 @@ addBookBtn.addEventListener("click", function () {
 /*to do :
 -get form imput and feed into the constructor function
 -make close button for the modal and set display value back to none
+-make cards for each book in the array
+  - create element node first (p, h1, h2, etc)
+  - to add text to those elements you have to create a textNode
+  - next append the textNode to the element, and finally the element node to whatever it's parent is in the doc
+  *make div, add class "bookCard" to it
+   *make h1 > then create textNode for title and append it to h1 > append h1 to the div
+   *make p > create textNode for author and append it to p > append p to the div
+   *make another p > create textNode for amnt of pages, append to p > append p to the div
+   * append the bookCard div to the cardsDiv(body)
+    //need a way to make sure the same book doesnt get added multiple times when going through the book array
 
 thoughts:
 -whats the point of the constructor object if im just grabbing info from the input and storing it in the array?
