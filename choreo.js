@@ -73,9 +73,9 @@ addBookBtn.addEventListener("click", function () {
 
 
 /*to do :
--get form imput and feed into the constructor function
+-get form imput and feed into the constructor function: DONE
 -make close button for the modal and set display value back to none
--make cards for each book in the array
+-make cards for each book in the array: DONE
   - create element node first (p, h1, h2, etc)
   - to add text to those elements you have to create a textNode
   - next append the textNode to the element, and finally the element node to whatever it's parent is in the doc
@@ -84,8 +84,9 @@ addBookBtn.addEventListener("click", function () {
    *make p > create textNode for author and append it to p > append p to the div
    *make another p > create textNode for amnt of pages, append to p > append p to the div
    * append the bookCard div to the cardsDiv(body)
-    //need a way to make sure the same book doesnt get added multiple times when going through the book array
-
+   
+    ****need a way to make sure the same book doesnt get added multiple times when going through the book array
+- add remove button and read button for books
 thoughts:
 -whats the point of the constructor object if im just grabbing info from the input and storing it in the array?
   - is it to make the info into an object before storing it in the array??
