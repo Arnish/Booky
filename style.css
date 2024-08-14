@@ -78,6 +78,25 @@
         transform: translate(-50%, -50%) rotate(45deg);
     }
 } */
+
+#cardsDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.bookCard {
+    background-color: #4a5759;
+    border-radius: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#f7e1d7;
+
+}
 #modalBG { /*this is the background when the modal pops up, makes BG out of focus */
     height: 100%;
     width: 100%;
