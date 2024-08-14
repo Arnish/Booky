@@ -56,7 +56,7 @@
     top: 13.9%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-49%, -50%) rotate(0deg);
+    transform: translate(-49%, -60%) rotate(0deg);
     transition-duration: 500ms;
     font-size: 20vh;
     line-height: 0;
@@ -64,7 +64,7 @@
     border-style: none;
 }
 #addBook:hover {
-    transform: translate(-46%, -50%) rotate(45deg);
+    transform: translate(-49%, -60%) rotate(45deg);
     transition-duration: 1000ms;
     /*v important, have to combine transformations since youre doing multiple ones to positon it as well*/
 }
