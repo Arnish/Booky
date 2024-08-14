@@ -8,6 +8,13 @@ function Book(title,author,pages) {
     this.pages = pages;
 }
 
+//closemodal btn
+const closeBtnModal = document.getElementById("closeModal");
+closeBtnModal.addEventListener("click", function () {
+    document.getElementById("modalBG").style.display = "none"; 
+    document.getElementById("modalContent").style.display = "none";
+});
+
 const formStuff = document.getElementById("formy");
 formStuff.addEventListener('submit', (event) => { //not sure why this doesnt work without the event function part... 
     event.preventDefault();//prevents the submit. what this means is that you can take the user input manually below and use it in a different way!
