@@ -109,7 +109,7 @@
 
 }
 #modalContent {
-    background-color: #edafb8;
+    background-color: #4a5759;
     height: 300px;
     width: 300px;
     display: flex;
@@ -118,6 +118,22 @@
     border-radius: 20px;
     text-align: center;
     display: none;
+}
+#closeModal{
+    position: absolute;
+    top:39%;
+    left: 54.5%;
+    font-size: 1em;
+    font-weight: bold;
+    color: #f7e1d7;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: dotted;
+    background: none;
+}
+#closeModal:hover{
+    background-color: white;
+    color: red;
 }
 #modalContent div, h1{
     margin-bottom: 10px;
