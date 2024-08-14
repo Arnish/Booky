@@ -64,7 +64,7 @@
     border-style: none;
 }
 #addBook:hover {
-    transform: translate(-46%, -43%) rotate(45deg);
+    transform: translate(-49%, -43%) rotate(45deg);
     transition-duration: 1000ms;
     animation-iteration-count: 1;
     animation-timing-function: linear; 
