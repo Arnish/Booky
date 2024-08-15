@@ -59,6 +59,9 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
         //appends the card div to the main body div
         cardBody.appendChild(bookCardDiv);
 
+        //popping the main array so it doesnt duplicate books everytime
+        let poppedArr = theLib.pop();
+        console.log(poppedArr);
         //console.log(textTitle);
         //console.log(theLib[i].title);
     }
