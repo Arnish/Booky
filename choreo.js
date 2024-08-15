@@ -40,6 +40,7 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
 
         const bookCardDiv = document.createElement("div");
         bookCardDiv.classList.add("bookCard");
+        bookCardDiv.setAttribute("id", "carded")
         //makes title and appends it to the h1 element > then appends to the card div itself
         const headerTitle = document.createElement("h1");
         const textTitle = document.createTextNode(theLib[i].title);
@@ -60,6 +61,8 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
         //make a remove button and a read button
         const removeBtn = document.createElement("button");
         const textBtn = document.createTextNode("Remove");
+        //add ID to btn
+        removeBtn.setAttribute("id","remBookBtn");
         removeBtn.appendChild(textBtn);
         bookCardDiv.appendChild(removeBtn);
 
@@ -73,6 +76,11 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
         //console.log(theLib[i].title);
     }
     //console.log(testForm);
+    const bookCardDiv = document.getElementById("carded");
+    const remBtn = document.getElementById("remBookBtn");
+    remBtn.addEventListener("click", function(){
+        bookCardDiv.remove();
+    })
 
     //closes the modal once done
     document.getElementById("modalBG").style.display = "none"; 
