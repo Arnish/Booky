@@ -56,6 +56,13 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
         const textPages = document.createTextNode(theLib[i].pages);
         paraPages.appendChild(textPages);
         bookCardDiv.appendChild(paraPages);
+
+        //make a remove button and a read button
+        const removeBtn = document.createElement("button");
+        const textBtn = document.createTextNode("Remove");
+        removeBtn.appendChild(textBtn);
+        bookCardDiv.appendChild(removeBtn);
+
         //appends the card div to the main body div
         cardBody.appendChild(bookCardDiv);
 
