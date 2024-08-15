@@ -64,7 +64,7 @@
     border-style: none;
 }
 #addBook:hover {
-    transform: translate(-45%, -60%) rotate(45deg);
+    transform: translate(-43%, -60%) rotate(45deg);
     transition-duration: 1000ms;
     /*v important, have to combine transformations since youre doing multiple ones to positon it as well*/
 }
@@ -122,14 +122,15 @@
 #closeModal{
     position: absolute;
     top:39%;
-    left: 54.5%;
+    left: 54.7%;
     font-size: 1em;
     font-weight: bold;
     color: #f7e1d7;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 5px;
+    border-radius: 10px;
     border-style: dotted;
     background: none;
+    border-top-right-radius: 20px;
 }
 #closeModal:hover{
     background-color: white;
