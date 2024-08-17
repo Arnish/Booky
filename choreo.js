@@ -40,7 +40,7 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
 
         const bookCardDiv = document.createElement("div");
         bookCardDiv.classList.add("bookCard");
-        bookCardDiv.setAttribute("id", "carded")
+        bookCardDiv.setAttribute("id", theLib[i].title); //set the id of each book to the title
         //makes title and appends it to the h1 element > then appends to the card div itself
         const headerTitle = document.createElement("h1");
         const textTitle = document.createTextNode(theLib[i].title);
@@ -62,7 +62,9 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
         const removeBtn = document.createElement("button");
         const textBtn = document.createTextNode("Remove");
         //add ID to btn
-        removeBtn.setAttribute("id","remBookBtn");
+        removeBtn.setAttribute("id", [i]); //give each remove button an index, but HOW do we use this index //store each in an array for idx
+        removeBtn.setAttribute("onclick", "console.log(this.id)")
+        removeBtn.classList.add("remBkBtn");
         removeBtn.appendChild(textBtn);
         bookCardDiv.appendChild(removeBtn);
 
@@ -76,10 +78,22 @@ formStuff.addEventListener('submit', (event) => { //not sure why this doesnt wor
         //console.log(theLib[i].title);
     }
     //console.log(testForm);
+    //assign the title to the remove button as well
     const bookCardDiv = document.getElementById("carded");
-    const remBtn = document.getElementById("remBookBtn");
-    remBtn.addEventListener("click", function(){
-        bookCardDiv.remove();
+    //const remBtn = document.getElementById("remBookBtn");
+    const remBtn = document.querySelector(".remBkBtn");
+    console.log(remBtn);
+
+    //find the index of the current book and use that to find the index needed to REMOVE
+    // for(i=0; i<remBtn.length; i++) {
+    //     let remBtnCurrent = remBtn[i];
+    // }
+    tester = (event) => {
+        console.log(event.target);
+    }
+    remBtn.addEventListener("click", function(event){
+        //get the id of the parent div when clicked
+        console.log(event.target.parentNode.id)
     })
 
     //closes the modal once done
@@ -112,6 +126,10 @@ addBookBtn.addEventListener("click", function () {
    
     ****need a way to make sure the same book doesnt get added multiple times when going through the book array
 - add remove button and read button for books
+FOR REMOVE BTN:
+ -store each in an array to get the index of the one clicked
+ -sort through IDs of each remove button until it matches the index of the one clicked
+
 thoughts:
 -whats the point of the constructor object if im just grabbing info from the input and storing it in the array?
   - is it to make the info into an object before storing it in the array??
