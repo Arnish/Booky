@@ -130,6 +130,8 @@ FOR REMOVE BTN:
  -store each in an array to get the index of the one clicked
  -sort through IDs of each remove button until it matches the index of the one clicked
 
+
+** REDO EVERYTHING USING "THIS."! 
 thoughts:
 -whats the point of the constructor object if im just grabbing info from the input and storing it in the array?
   - is it to make the info into an object before storing it in the array??
